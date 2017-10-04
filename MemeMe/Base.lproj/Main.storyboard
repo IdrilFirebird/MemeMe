@@ -22,9 +22,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7fg-yG-Dvm">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2lR-BS-JBe">
+                                <rect key="frame" x="-59.5" y="20" width="494" height="647"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="494" id="jAJ-S0-YqV"/>
+                                </constraints>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7fg-yG-Dvm">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Camera" id="xu2-BZ-hhi">
                                         <connections>
@@ -39,48 +44,57 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="47a-Fh-xO6">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="47a-Fh-xO6">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <items>
                                     <barButtonItem title="Share" id="eSy-2v-eRt"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="GEB-hv-fb0"/>
                                     <barButtonItem title="Cancel" id="U7s-0w-DDg"/>
                                 </items>
                             </toolbar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ajp-2O-WF7">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ajp-2O-WF7">
                                 <rect key="frame" x="26" y="93" width="323" height="492"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="500" id="09O-EH-rs9"/>
+                                    <constraint firstAttribute="height" constant="492" id="09O-EH-rs9"/>
                                     <constraint firstAttribute="width" constant="323" id="eaR-dQ-MUc"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ofk-kq-qX5">
-                                <rect key="frame" x="139" y="584" width="55" height="21"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" text="TOP" allowsEditingTextAttributes="YES" textAlignment="center" minimumFontSize="40" translatesAutoresizingMaskIntoConstraints="NO" id="mbB-cM-dDZ">
+                                <rect key="frame" x="127" y="64" width="137" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </stackView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Bottom" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f83-vB-xpC">
-                                <rect key="frame" x="149" y="584" width="76" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="40"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" returnKeyType="done"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Top" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mbB-cM-dDZ">
-                                <rect key="frame" x="139" y="55" width="97" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" text="BOTTOM" allowsEditingTextAttributes="YES" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f83-vB-xpC">
+                                <rect key="frame" x="117" y="547" width="136" height="76"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="40"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" returnKeyType="done"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ajp-2O-WF7" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="4Qy-OB-EeJ"/>
-                            <constraint firstItem="ajp-2O-WF7" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="u2E-Hw-2Js"/>
+                            <constraint firstItem="7fg-yG-Dvm" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="522-RY-y2J"/>
+                            <constraint firstItem="47a-Fh-xO6" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="8vQ-cY-fPR"/>
+                            <constraint firstItem="2lR-BS-JBe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="C5W-UX-lBJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="47a-Fh-xO6" secondAttribute="bottom" constant="-44" id="Fbc-O0-g9X"/>
+                            <constraint firstItem="7fg-yG-Dvm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hBP-ml-eE9"/>
+                            <constraint firstItem="47a-Fh-xO6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nEK-kk-bsn"/>
+                            <constraint firstItem="7fg-yG-Dvm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-44" id="rUB-CD-jPp"/>
+                            <constraint firstItem="ajp-2O-WF7" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-4.5" id="u2E-Hw-2Js"/>
+                            <constraint firstItem="2lR-BS-JBe" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="uxd-0X-VqY"/>
+                            <constraint firstItem="2lR-BS-JBe" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="yNA-tN-6fD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <connections>
+                        <outlet property="bottomText" destination="f83-vB-xpC" id="5iw-5W-N03"/>
+                        <outlet property="imageView" destination="ajp-2O-WF7" id="vOe-PM-M6G"/>
+                        <outlet property="imageViewBackground" destination="2lR-BS-JBe" id="TDb-Pt-93Z"/>
+                        <outlet property="topText" destination="mbB-cM-dDZ" id="XGW-se-s7x"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9E9859131F84161100EF9852 /* impact.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9E9859121F8415FC00EF9852 /* impact.ttf */; };
+		9E9859151F85676A00EF9852 /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9859141F85676A00EF9852 /* Meme.swift */; };
 		9EC47CBF1F840FF700925B6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC47CBE1F840FF700925B6E /* AppDelegate.swift */; };
 		9EC47CC11F840FF700925B6E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC47CC01F840FF700925B6E /* ViewController.swift */; };
 		9EC47CC41F840FF700925B6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EC47CC21F840FF700925B6E /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		9E9859121F8415FC00EF9852 /* impact.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = impact.ttf; sourceTree = "<group>"; };
+		9E9859141F85676A00EF9852 /* Meme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
 		9EC47CBB1F840FF700925B6E /* MemeMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemeMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EC47CBE1F840FF700925B6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9EC47CC01F840FF700925B6E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 			children = (
 				9EC47CBE1F840FF700925B6E /* AppDelegate.swift */,
 				9EC47CC01F840FF700925B6E /* ViewController.swift */,
+				9E9859141F85676A00EF9852 /* Meme.swift */,
 				9EC47CC21F840FF700925B6E /* Main.storyboard */,
 				9EC47CC51F840FF700925B6E /* Assets.xcassets */,
 				9E9859121F8415FC00EF9852 /* impact.ttf */,
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E9859151F85676A00EF9852 /* Meme.swift in Sources */,
 				9EC47CC11F840FF700925B6E /* ViewController.swift in Sources */,
 				9EC47CBF1F840FF700925B6E /* AppDelegate.swift in Sources */,
 			);
