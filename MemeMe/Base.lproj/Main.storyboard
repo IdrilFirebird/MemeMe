@@ -18,14 +18,21 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2lR-BS-JBe">
-                                <rect key="frame" x="-59.5" y="20" width="494" height="647"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                            <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ajp-2O-WF7" customClass="MemeImageView" customModule="MemeMe" customModuleProvider="target">
+                                <rect key="frame" x="26" y="83" width="323" height="492"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" image="YES" notEnabled="YES" allowsDirectInteraction="YES"/>
+                                </accessibility>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="494" id="jAJ-S0-YqV"/>
+                                    <constraint firstAttribute="height" constant="492" id="09O-EH-rs9"/>
+                                    <constraint firstAttribute="width" constant="323" id="eaR-dQ-MUc"/>
                                 </constraints>
                             </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7fg-yG-Dvm">
@@ -52,41 +59,37 @@
                                     <barButtonItem title="Cancel" id="U7s-0w-DDg"/>
                                 </items>
                             </toolbar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ajp-2O-WF7">
-                                <rect key="frame" x="26" y="93" width="323" height="492"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="492" id="09O-EH-rs9"/>
-                                    <constraint firstAttribute="width" constant="323" id="eaR-dQ-MUc"/>
-                                </constraints>
-                            </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" text="TOP" allowsEditingTextAttributes="YES" textAlignment="center" minimumFontSize="40" translatesAutoresizingMaskIntoConstraints="NO" id="mbB-cM-dDZ">
-                                <rect key="frame" x="127" y="64" width="137" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" text="BOTTOM" allowsEditingTextAttributes="YES" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f83-vB-xpC">
+                                <rect key="frame" x="119.5" y="576" width="136" height="49"/>
                                 <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="40"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" returnKeyType="done"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" text="BOTTOM" allowsEditingTextAttributes="YES" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f83-vB-xpC">
-                                <rect key="frame" x="117" y="547" width="136" height="76"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" text="TOP" allowsEditingTextAttributes="YES" textAlignment="center" minimumFontSize="40" translatesAutoresizingMaskIntoConstraints="NO" id="mbB-cM-dDZ">
+                                <rect key="frame" x="155" y="73" width="65" height="49"/>
                                 <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="40"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" returnKeyType="done"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="ajp-2O-WF7" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="4Qy-OB-EeJ"/>
-                            <constraint firstItem="7fg-yG-Dvm" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="522-RY-y2J"/>
-                            <constraint firstItem="47a-Fh-xO6" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="8vQ-cY-fPR"/>
-                            <constraint firstItem="2lR-BS-JBe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="C5W-UX-lBJ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="47a-Fh-xO6" secondAttribute="bottom" constant="-44" id="Fbc-O0-g9X"/>
-                            <constraint firstItem="7fg-yG-Dvm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hBP-ml-eE9"/>
-                            <constraint firstItem="47a-Fh-xO6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nEK-kk-bsn"/>
-                            <constraint firstItem="7fg-yG-Dvm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-44" id="rUB-CD-jPp"/>
-                            <constraint firstItem="ajp-2O-WF7" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-4.5" id="u2E-Hw-2Js"/>
-                            <constraint firstItem="2lR-BS-JBe" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="uxd-0X-VqY"/>
-                            <constraint firstItem="2lR-BS-JBe" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="yNA-tN-6fD"/>
+                            <constraint firstItem="mbB-cM-dDZ" firstAttribute="centerX" secondItem="HeI-rW-kDF" secondAttribute="centerX" id="1dj-18-wl6"/>
+                            <constraint firstItem="f83-vB-xpC" firstAttribute="centerX" secondItem="HeI-rW-kDF" secondAttribute="centerX" id="36m-G7-u7V"/>
+                            <constraint firstItem="ajp-2O-WF7" firstAttribute="centerX" secondItem="HeI-rW-kDF" secondAttribute="centerX" id="4Qy-OB-EeJ"/>
+                            <constraint firstItem="7fg-yG-Dvm" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="522-RY-y2J"/>
+                            <constraint firstItem="mbB-cM-dDZ" firstAttribute="top" secondItem="HeI-rW-kDF" secondAttribute="top" constant="53" id="8A5-Ow-KYL"/>
+                            <constraint firstItem="47a-Fh-xO6" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="8vQ-cY-fPR"/>
+                            <constraint firstItem="2lR-BS-JBe" firstAttribute="top" secondItem="HeI-rW-kDF" secondAttribute="top" id="C5W-UX-lBJ"/>
+                            <constraint firstItem="HeI-rW-kDF" firstAttribute="top" secondItem="47a-Fh-xO6" secondAttribute="bottom" constant="-44" id="Fbc-O0-g9X"/>
+                            <constraint firstItem="HeI-rW-kDF" firstAttribute="bottom" secondItem="f83-vB-xpC" secondAttribute="bottom" constant="42" id="aF9-uo-Bgq"/>
+                            <constraint firstItem="7fg-yG-Dvm" firstAttribute="leading" secondItem="HeI-rW-kDF" secondAttribute="leading" id="hBP-ml-eE9"/>
+                            <constraint firstItem="2lR-BS-JBe" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="lpe-yR-VfY"/>
+                            <constraint firstItem="47a-Fh-xO6" firstAttribute="leading" secondItem="HeI-rW-kDF" secondAttribute="leading" id="nEK-kk-bsn"/>
+                            <constraint firstItem="7fg-yG-Dvm" firstAttribute="top" secondItem="HeI-rW-kDF" secondAttribute="bottom" constant="-44" id="rUB-CD-jPp"/>
+                            <constraint firstItem="ajp-2O-WF7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-4" id="u2E-Hw-2Js"/>
+                            <constraint firstItem="2lR-BS-JBe" firstAttribute="centerX" secondItem="HeI-rW-kDF" secondAttribute="centerX" id="uxd-0X-VqY"/>
+                            <constraint firstItem="2lR-BS-JBe" firstAttribute="bottom" secondItem="HeI-rW-kDF" secondAttribute="bottom" id="yNA-tN-6fD"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="HeI-rW-kDF"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <connections>

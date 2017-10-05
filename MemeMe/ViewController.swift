@@ -12,7 +12,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate,
 UINavigationControllerDelegate, UITextFieldDelegate {
 
     @IBOutlet weak var imageViewBackground: UIImageView!
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var imageView: MemeImageView!
     @IBOutlet weak var bottomText: UITextField!
     @IBOutlet weak var topText: UITextField!
     
@@ -25,6 +25,10 @@ UINavigationControllerDelegate, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        imageView.insetsLayoutMarginsFromSafeArea  = true
+//        pickImageFromCameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(.Camera)
+//        pickImageFromAlbumButton.enabled = UIImagePickerController.isSourceTypeAvailable(.PhotoLibrary)
+        
         bottomText.defaultTextAttributes = memeTextAttributes
         bottomText.text = "BOTTOM"
         bottomText.delegate = self
