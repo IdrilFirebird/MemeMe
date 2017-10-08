@@ -38,23 +38,25 @@
                                             <constraint firstAttribute="width" constant="323" id="eaR-dQ-MUc"/>
                                         </constraints>
                                     </imageView>
-                                    <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" text="TOP" allowsEditingTextAttributes="YES" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="40" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="mbB-cM-dDZ">
-                                        <rect key="frame" x="136" y="49" width="65" height="49"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" text="TOP" allowsEditingTextAttributes="YES" textAlignment="center" clearsOnBeginEditing="YES" adjustsFontForContentSizeCategory="YES" minimumFontSize="7" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="mbB-cM-dDZ">
+                                        <rect key="frame" x="135" y="20" width="65" height="49"/>
                                         <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="40"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" returnKeyType="done"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" text="BOTTOM" allowsEditingTextAttributes="YES" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="f83-vB-xpC">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" text="BOTTOM" allowsEditingTextAttributes="YES" textAlignment="center" clearsOnBeginEditing="YES" adjustsFontForContentSizeCategory="YES" minimumFontSize="7" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="f83-vB-xpC">
                                         <rect key="frame" x="100" y="490" width="136" height="49"/>
                                         <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="40"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" returnKeyType="done"/>
                                     </textField>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="f83-vB-xpC" firstAttribute="width" relation="lessThanOrEqual" secondItem="h6A-8W-Qs4" secondAttribute="width" id="5f9-wf-LcJ"/>
+                                    <constraint firstItem="mbB-cM-dDZ" firstAttribute="centerX" secondItem="h6A-8W-Qs4" secondAttribute="centerX" id="9oB-Vq-xH1"/>
                                     <constraint firstItem="mbB-cM-dDZ" firstAttribute="top" secondItem="h6A-8W-Qs4" secondAttribute="top" constant="20" id="Oeq-Og-uCa"/>
                                     <constraint firstItem="f83-vB-xpC" firstAttribute="bottom" secondItem="h6A-8W-Qs4" secondAttribute="bottom" constant="-20" id="Xas-lW-U83"/>
                                     <constraint firstItem="f83-vB-xpC" firstAttribute="centerX" secondItem="h6A-8W-Qs4" secondAttribute="centerX" id="XfW-eh-8e0"/>
                                     <constraint firstItem="ajp-2O-WF7" firstAttribute="centerY" secondItem="h6A-8W-Qs4" secondAttribute="centerY" id="bjh-8n-8AC"/>
-                                    <constraint firstItem="mbB-cM-dDZ" firstAttribute="centerX" secondItem="h6A-8W-Qs4" secondAttribute="centerX" id="hsW-2H-Oun"/>
+                                    <constraint firstItem="mbB-cM-dDZ" firstAttribute="width" relation="lessThanOrEqual" secondItem="h6A-8W-Qs4" secondAttribute="width" id="oaX-M9-Gy2"/>
                                     <constraint firstItem="ajp-2O-WF7" firstAttribute="centerX" secondItem="h6A-8W-Qs4" secondAttribute="centerX" id="zAb-L7-x5C"/>
                                 </constraints>
                             </view>
@@ -108,7 +110,7 @@
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <connections>
-                        <outlet property="bottomText" destination="f83-vB-xpC" id="5iw-5W-N03"/>
+                        <outlet property="bottomText" destination="f83-vB-xpC" id="JA8-UG-b4i"/>
                         <outlet property="bottomToolbar" destination="7fg-yG-Dvm" id="Smp-8P-OYa"/>
                         <outlet property="cameraPickerButton" destination="xu2-BZ-hhi" id="ePA-dQ-Anb"/>
                         <outlet property="cancelButton" destination="U7s-0w-DDg" id="907-YS-x2J"/>
@@ -116,7 +118,7 @@
                         <outlet property="imageViewBackground" destination="2lR-BS-JBe" id="TDb-Pt-93Z"/>
                         <outlet property="libraryPickerButton" destination="lXc-LS-0uq" id="DUR-yY-BAz"/>
                         <outlet property="shareButton" destination="eSy-2v-eRt" id="YwV-Zc-zYr"/>
-                        <outlet property="topText" destination="mbB-cM-dDZ" id="XGW-se-s7x"/>
+                        <outlet property="topText" destination="mbB-cM-dDZ" id="kKr-jc-gDn"/>
                         <outlet property="topToolbar" destination="47a-Fh-xO6" id="77w-jz-UmH"/>
                     </connections>
                 </viewController>
