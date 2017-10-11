@@ -25,6 +25,7 @@ class EditMemeViewController: UIViewController {
     
     
     var meme: Meme?
+    var delegate: EditMemeViewControllerDelegate?
     
 
     
@@ -159,7 +160,9 @@ class EditMemeViewController: UIViewController {
         activityController.completionWithItemsHandler = {(activityType: UIActivityType?, completed: Bool, returnedItems: [Any]?, error: Error?) -> Void in
             if completed {
                 self.save(memedImage)
-                self.dismiss(animated: true, completion: nil)
+                self.dismiss(animated: true, completion: {});
+                self.delegate?.editMemeViewControllerDidExit()
+
             }
         }
         
@@ -168,7 +171,8 @@ class EditMemeViewController: UIViewController {
     }
     
     @IBAction func cancelEditView(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        dismiss(animated: true, completion: {})
+        delegate?.editMemeViewControllerDidExit()
     }
     
     
@@ -204,6 +208,10 @@ class EditMemeViewController: UIViewController {
         NotificationCenter.default.removeObserver(self, name: .UIKeyboardWillHide, object: nil)
     }
     
+}
+
+protocol EditMemeViewControllerDelegate {
+    func editMemeViewControllerDidExit()
 }
 
 

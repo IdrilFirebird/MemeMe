@@ -8,7 +8,8 @@
 
 import UIKit
 
-class ShowImageViewController: UIViewController {
+class ShowImageViewController: UIViewController, EditMemeViewControllerDelegate {
+
 
     var meme : Meme!
     
@@ -28,6 +29,7 @@ class ShowImageViewController: UIViewController {
         let editMemeViewController = storyboard!.instantiateViewController(withIdentifier: "EditMemeViewController") as! EditMemeViewController
         
         editMemeViewController.meme = meme
+        editMemeViewController.delegate = self
         
         present(editMemeViewController, animated: true, completion: nil)
         
@@ -49,4 +51,9 @@ class ShowImageViewController: UIViewController {
     }
     */
 
+    func editMemeViewControllerDidExit() {
+        navigationController?.popToRootViewController(animated: true);
+    }
+    
+    
 }
