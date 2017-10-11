@@ -23,12 +23,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="osK-go-Tj6">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MemeCell" textLabel="V0A-rM-rVm" detailTextLabel="Kbh-af-w9L" style="IBUITableViewCellStyleValue1" id="osK-go-Tj6">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="osK-go-Tj6" id="1sh-Ng-E2H">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="V0A-rM-rVm">
+                                            <rect key="frame" x="16" y="12" width="33.5" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Kbh-af-w9L">
+                                            <rect key="frame" x="301" y="12" width="59" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -90,16 +106,30 @@
             </objects>
             <point key="canvasLocation" x="-783" y="839"/>
         </scene>
-        <!--View Controller-->
+        <!--Show Image View Controller-->
         <scene sceneID="l1x-p0-00y">
             <objects>
-                <viewController id="Ly9-Zk-75d" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ShowImageViewController" id="Ly9-Zk-75d" customClass="ShowImageViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KXm-94-Djt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DpG-UV-s7G" customClass="MemeImageView" customModule="MemeMe" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DpG-UV-s7G" firstAttribute="height" secondItem="HAN-Qg-CaD" secondAttribute="height" id="1eK-5Z-EU1"/>
+                            <constraint firstItem="DpG-UV-s7G" firstAttribute="centerX" secondItem="HAN-Qg-CaD" secondAttribute="centerX" id="6lu-Hs-Xhb"/>
+                            <constraint firstItem="DpG-UV-s7G" firstAttribute="width" secondItem="HAN-Qg-CaD" secondAttribute="width" id="K7r-ei-KMI"/>
+                            <constraint firstItem="DpG-UV-s7G" firstAttribute="centerY" secondItem="HAN-Qg-CaD" secondAttribute="centerY" id="Zsq-XL-mbz"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="HAN-Qg-CaD"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="DpG-UV-s7G" id="vhS-ZP-lFf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yeG-gc-TBG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

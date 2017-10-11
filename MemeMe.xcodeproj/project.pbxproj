@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E01B8011F8E9CFD006F14D9 /* ShowImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E01B8001F8E9CFD006F14D9 /* ShowImageViewController.swift */; };
 		9E2EA0011F8E89270050B3F4 /* MemeMeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2EA0001F8E89270050B3F4 /* MemeMeTableViewController.swift */; };
 		9E2EA0031F8E89730050B3F4 /* MemeMeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2EA0021F8E89730050B3F4 /* MemeMeCollectionViewController.swift */; };
 		9E9859131F84161100EF9852 /* impact.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9E9859121F8415FC00EF9852 /* impact.ttf */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9E01B8001F8E9CFD006F14D9 /* ShowImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowImageViewController.swift; sourceTree = "<group>"; };
 		9E2EA0001F8E89270050B3F4 /* MemeMeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeMeTableViewController.swift; sourceTree = "<group>"; };
 		9E2EA0021F8E89730050B3F4 /* MemeMeCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeMeCollectionViewController.swift; sourceTree = "<group>"; };
 		9E9859121F8415FC00EF9852 /* impact.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = impact.ttf; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				9EC47CCA1F840FF700925B6E /* Info.plist */,
 				9E2EA0001F8E89270050B3F4 /* MemeMeTableViewController.swift */,
 				9E2EA0021F8E89730050B3F4 /* MemeMeCollectionViewController.swift */,
+				9E01B8001F8E9CFD006F14D9 /* ShowImageViewController.swift */,
 			);
 			path = MemeMe;
 			sourceTree = "<group>";
@@ -158,6 +161,7 @@
 				9E2EA0031F8E89730050B3F4 /* MemeMeCollectionViewController.swift in Sources */,
 				9EDCF8F11F86D2E200A55162 /* MemeImageView.swift in Sources */,
 				9E9859151F85676A00EF9852 /* Meme.swift in Sources */,
+				9E01B8011F8E9CFD006F14D9 /* ShowImageViewController.swift in Sources */,
 				9EC47CC11F840FF700925B6E /* EditMemeViewController.swift in Sources */,
 				9EF9368D1F8E7F46002341B1 /* EditMemeViewControllerDelegateExtensions.swift in Sources */,
 				9EC47CBF1F840FF700925B6E /* AppDelegate.swift in Sources */,

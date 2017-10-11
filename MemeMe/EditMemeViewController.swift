@@ -24,7 +24,7 @@ class EditMemeViewController: UIViewController {
     @IBOutlet weak var cancelButton: UIBarButtonItem!
     
     
-    
+    var meme: Meme?
     
 
     
@@ -32,12 +32,11 @@ class EditMemeViewController: UIViewController {
         super.viewDidLoad()
         imageView.insetsLayoutMarginsFromSafeArea  = true
         initButtons()
-        
-        initTextFields(textField: bottomText, defaultText: "BOTTOM", delegate: self)
-
-        initTextFields(textField: topText, defaultText: "TOP" , delegate: self)
-        
-        // Do any additional setup after loading the view, typically from a nib.
+        if let meme = meme {
+            setImages(meme.originalImage)
+            shareButton.isEnabled = true
+        }
+        initTextFields(meme: meme)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -62,8 +61,8 @@ class EditMemeViewController: UIViewController {
         
         imageViewToBlur.addSubview(blurEffectView)
     }
-
-    func initTextFields(textField: UITextField, defaultText: String, delegate: UITextFieldDelegate) {
+    
+    func initTextField(textField: UITextField, defaultText: String, delegate: UITextFieldDelegate) {
         let memeTextAttributes:[String:Any] = [
             
             NSAttributedStringKey.strokeColor.rawValue: UIColor.black,
@@ -74,6 +73,22 @@ class EditMemeViewController: UIViewController {
         textField.defaultTextAttributes = memeTextAttributes
         textField.text = defaultText
         textField.delegate = delegate
+    }
+    
+    func initTextFields(meme: Meme?) {
+        var topText: String
+        var bottomText: String
+        if let meme = meme {
+            topText = meme.topText
+            bottomText = meme.bottomText
+        } else {
+            topText = "TOP"
+            bottomText = "BOTTOM"
+        }
+        
+        initTextField(textField: self.bottomText, defaultText: bottomText, delegate: self)
+        initTextField(textField: self.topText, defaultText: topText , delegate: self)
+        
     }
     
     func initButtons() {
@@ -100,12 +115,17 @@ class EditMemeViewController: UIViewController {
     }
     
     func save(_ memedImage: UIImage?) {
-        let meme: Meme
+        
         if let memedImage = memedImage {
             meme = Meme(topText: topText.text!, bottomText: bottomText.text!, originalImage: imageView.image!, memedImage: memedImage)
         } else {
             meme = Meme(topText: topText.text!, bottomText: bottomText.text!, originalImage: imageView.image!, memedImage: memeMefyImage() )
         }
+        
+        let object = UIApplication.shared.delegate
+        let appDelegate = object as! AppDelegate
+        appDelegate.memes.append(meme!)
+        
     }
     
     func presentImagePickerContoller(sourceType: UIImagePickerControllerSourceType) {
@@ -115,6 +135,12 @@ class EditMemeViewController: UIViewController {
         present(imagePicker, animated: true, completion: nil)
     }
     
+    func setImages(_ image: UIImage) {
+        self.imageView.image = image
+        // Add second Image View in the background with blur
+        self.imageViewBackground.image = image
+        blurImageView(imageViewToBlur: self.imageViewBackground)
+    }
     
     //MARK: Actions
 
@@ -131,8 +157,9 @@ class EditMemeViewController: UIViewController {
         let memedImage = memeMefyImage()
         let activityController = UIActivityViewController(activityItems: [memedImage], applicationActivities: nil)
         activityController.completionWithItemsHandler = {(activityType: UIActivityType?, completed: Bool, returnedItems: [Any]?, error: Error?) -> Void in
-            if completed == true {
+            if completed {
                 self.save(memedImage)
+                self.dismiss(animated: true, completion: nil)
             }
         }
         

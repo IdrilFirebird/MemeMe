@@ -11,11 +11,15 @@ import UIKit
 private let reuseIdentifier = "Cell"
 
 class MemeMeCollectionViewController: UICollectionViewController {
+    
+ var memes: [Meme]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-    
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        memes = appDelegate.memes
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
