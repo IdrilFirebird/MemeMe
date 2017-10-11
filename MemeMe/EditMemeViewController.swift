@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class EditMemeViewController: UIViewController {
 
     @IBOutlet weak var imageViewBackground: UIImageView!
     @IBOutlet weak var imageView: MemeImageView!
@@ -81,7 +81,6 @@ class ViewController: UIViewController {
         libraryPickerButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.photoLibrary)
         
         shareButton.isEnabled = false
-        cancelButton.isEnabled = false
     }
     
     func memeMefyImage() -> UIImage {
@@ -140,6 +139,11 @@ class ViewController: UIViewController {
         
         present(activityController, animated: true, completion: nil)
     }
+    
+    @IBAction func cancelEditView(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     
     //MARK: Keyboard handling
     @objc func keyboardWillShow(_ notification:Notification) {
