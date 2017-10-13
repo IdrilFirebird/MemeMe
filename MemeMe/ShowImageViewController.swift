@@ -21,7 +21,6 @@ class ShowImageViewController: UIViewController, EditMemeViewControllerDelegate 
         imageView.image = meme.memedImage
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(ShowImageViewController.showEditView))
-        // Do any additional setup after loading the view.
     }
 
     
@@ -35,21 +34,6 @@ class ShowImageViewController: UIViewController, EditMemeViewControllerDelegate 
         
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
     func editMemeViewControllerDidExit() {
         navigationController?.popToRootViewController(animated: true);
