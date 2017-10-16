@@ -16,9 +16,8 @@
 		9EC47CBF1F840FF700925B6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC47CBE1F840FF700925B6E /* AppDelegate.swift */; };
 		9EC47CC11F840FF700925B6E /* EditMemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC47CC01F840FF700925B6E /* EditMemeViewController.swift */; };
 		9EC47CC41F840FF700925B6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EC47CC21F840FF700925B6E /* Main.storyboard */; };
-		9EC47CC61F840FF700925B6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EC47CC51F840FF700925B6E /* Assets.xcassets */; };
-		9EC47CC91F840FF700925B6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EC47CC71F840FF700925B6E /* LaunchScreen.storyboard */; };
 		9EDCF8F11F86D2E200A55162 /* MemeImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDCF8F01F86D2E200A55162 /* MemeImageView.swift */; };
+		9EEC71351F953A7F009E49AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EEC71301F95341E009E49AC /* Assets.xcassets */; };
 		9EF9368D1F8E7F46002341B1 /* EditMemeViewControllerDelegateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF9368C1F8E7F46002341B1 /* EditMemeViewControllerDelegateExtensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,10 +32,9 @@
 		9EC47CBE1F840FF700925B6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9EC47CC01F840FF700925B6E /* EditMemeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMemeViewController.swift; sourceTree = "<group>"; };
 		9EC47CC31F840FF700925B6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		9EC47CC51F840FF700925B6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		9EC47CC81F840FF700925B6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9EC47CCA1F840FF700925B6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9EDCF8F01F86D2E200A55162 /* MemeImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeImageView.swift; sourceTree = "<group>"; };
+		9EEC71301F95341E009E49AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9EF9368C1F8E7F46002341B1 /* EditMemeViewControllerDelegateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMemeViewControllerDelegateExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,9 +74,8 @@
 				9EDCF8F01F86D2E200A55162 /* MemeImageView.swift */,
 				9E9859141F85676A00EF9852 /* Meme.swift */,
 				9EC47CC21F840FF700925B6E /* Main.storyboard */,
-				9EC47CC51F840FF700925B6E /* Assets.xcassets */,
+				9EEC71301F95341E009E49AC /* Assets.xcassets */,
 				9E9859121F8415FC00EF9852 /* impact.ttf */,
-				9EC47CC71F840FF700925B6E /* LaunchScreen.storyboard */,
 				9EC47CCA1F840FF700925B6E /* Info.plist */,
 				9E2EA0001F8E89270050B3F4 /* MemeMeTableViewController.swift */,
 				9E2EA0021F8E89730050B3F4 /* MemeMeCollectionViewController.swift */,
@@ -148,8 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E9859131F84161100EF9852 /* impact.ttf in Resources */,
-				9EC47CC91F840FF700925B6E /* LaunchScreen.storyboard in Resources */,
-				9EC47CC61F840FF700925B6E /* Assets.xcassets in Resources */,
+				9EEC71351F953A7F009E49AC /* Assets.xcassets in Resources */,
 				9EC47CC41F840FF700925B6E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -182,14 +178,6 @@
 				9EC47CC31F840FF700925B6E /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		9EC47CC71F840FF700925B6E /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9EC47CC81F840FF700925B6E /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

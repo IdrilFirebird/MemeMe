@@ -170,11 +170,11 @@
             </objects>
             <point key="canvasLocation" x="-2567" y="453"/>
         </scene>
-        <!--Item-->
+        <!--Table-->
         <scene sceneID="VOI-qA-kaN">
             <objects>
                 <navigationController id="o7b-hs-bLs" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="QOM-ue-il1"/>
+                    <tabBarItem key="tabBarItem" title="Table" image="tableImage" landscapeImage="tableImage" selectedImage="tableImage" id="QOM-ue-il1"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cbS-fz-5j7">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -303,11 +303,11 @@
             </objects>
             <point key="canvasLocation" x="-1271" y="-641"/>
         </scene>
-        <!--Item-->
+        <!--Collection-->
         <scene sceneID="N3H-Jj-cd1">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pfG-F9-4ox" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="BEe-F6-cWi"/>
+                    <tabBarItem key="tabBarItem" title="Collection" image="collectionImage" landscapeImage="collectionImage" selectedImage="collectionImage" id="BEe-F6-cWi"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WPa-77-mpX">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -323,6 +323,10 @@
             <point key="canvasLocation" x="-1735" y="839"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="collectionImage" width="30" height="30"/>
+        <image name="tableImage" width="30" height="30"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="ysT-PA-jSD"/>
     </inferredMetricsTieBreakers>

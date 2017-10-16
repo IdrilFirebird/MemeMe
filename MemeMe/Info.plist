@@ -2,22 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>UIViewControllerBasedStatusBarAppearance</key>
-	<false/>
-	<key>UIStatusBarHidden</key>
-	<true/>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Already taken MemeSelfie? Let me use it!</string>
-	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>Nice Meme i&apos;d like to safe it</string>
-	<key>NSCameraUsageDescription</key>
-	<string>Needs Camera to take MemeSelfie (or other funny thing)</string>
-	<key>LSApplicationCategoryType</key>
-	<string></string>
-	<key>UIAppFonts</key>
-	<array>
-		<string>impact.ttf</string>
-	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -34,16 +18,30 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>Needs Camera to take MemeSelfie (or other funny thing)</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Nice Meme i'd like to safe it</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Already taken MemeSelfie? Let me use it!</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>impact.ttf</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
-	<string>LaunchScreen</string>
+	<string>Main</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
 	</array>
+	<key>UIStatusBarHidden</key>
+	<true/>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
@@ -57,5 +55,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
 </dict>
 </plist>

@@ -23,7 +23,8 @@ class MemeMeCollectionViewController: UICollectionViewController {
         setFlowLayout()
     }
     
-    override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
         setFlowLayout()
     }
 
@@ -56,9 +57,9 @@ class MemeMeCollectionViewController: UICollectionViewController {
     func setFlowLayout() {
         let space:CGFloat = 3.0
         
-        let numberOfCellsInRow : CGFloat = view.frame.size.height > view.frame.size.width ? 3.0 : 6.0
-        
-        let dimension = (view.frame.size.width - (numberOfCellsInRow - 1  * space)) / numberOfCellsInRow
+        let numberOfCellsInRow : CGFloat = view.frame.size.height > view.frame.size.width ? 3.0 : 5.0
+
+        let dimension = (view.frame.size.width - ((numberOfCellsInRow - 1)  * space)) / numberOfCellsInRow
         
         flowLayout.minimumInteritemSpacing = space
         flowLayout.minimumLineSpacing = space
